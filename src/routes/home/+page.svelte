@@ -29,13 +29,15 @@
 	>
 		Desferrando as pessoas desde 2023
 	</h2>
-	<a href="/explanation">
-		<button
-			class="transition-all ease-in-out duration-[2s] delay-[2s] opacity-0 {opacityDone
-				? 'started'
-				: ''} {positionOffset ? 'translate-y-[20rem]' : 'translate-y-0'}">Continuar</button
-		>
-	</a>
+
+	<button
+		on:click={() => {
+			goto('/explanation');
+		}}
+		class="transition-all ease-in-out duration-[2s] delay-[2s] opacity-0 {opacityDone
+			? 'started'
+			: ''} {positionOffset ? 'translate-y-[20rem]' : 'translate-y-0'}">Continuar</button
+	>
 </div>
 
 <style>
@@ -51,6 +53,4 @@
 	.started {
 		opacity: 1;
 	}
-
-	
 </style>
