@@ -51,7 +51,8 @@
 
 	function calculateNPV(discountRate: number, cashFlows: number[]): number {
 		let npv = 0;
-
+		console.log(cashFlows);
+		console.log(discountRate);
 		for (let i = 0; i < cashFlows.length; i++) {
 			npv += cashFlows[i] / Math.pow(1 + discountRate, i + 1);
 		}
