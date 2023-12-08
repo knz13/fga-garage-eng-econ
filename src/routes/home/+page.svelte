@@ -52,21 +52,5 @@
 		opacity: 1;
 	}
 
-	button {
-		margin-top: 20px;
-		padding: 10px 15px;
-		cursor: pointer;
-		border: none;
-		background-color: #6200ea;
-		color: white;
-		border-radius: 5px;
-		font-size: 16px;
-		transition: background-color 0.3s ease;
-		transition: all 0.5s ease;
-
-		/* optional styling for button hover */
-		&:hover {
-			background-color: #4b00b5;
-		}
-	}
+	
 </style>

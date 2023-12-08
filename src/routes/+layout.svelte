@@ -72,26 +72,27 @@
 		--svoast-error-colour: #ef4444;
 		--svoast-bar-width: 0.5rem;
 	}
+
 	:global(button) {
 		transition-property: all;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 		transition-duration: 150ms;
 		padding: 0.5rem 1rem;
 		cursor: pointer;
-		border: solid;
-		border-color: gray;
-		background-color: transparent;
+		background-color: #6200ea;
 		color: white;
 		border-radius: 4px;
 		opacity: 1;
 
 		&:hover {
-			border-color: white;
+			background-color: #4b00b5;
+			scale: 0.975;
 			opacity: 1.5;
 		}
 
 		&:active {
 			opacity: 0.7;
+			scale: 0.95;
 		}
 	}
 

@@ -17,22 +17,25 @@
 </script>
 
 <div class="centered-container">
-	<h1
-		class="absolute top-[2rem] left-[2rem] transition-opacity ease-in duration-[1s] opacity-0 {started
-			? 'started'
-			: ''}"
-	>
-		FGA'S GARAGE
-	</h1>
-	<h2
-		class="transition-opacity ease-in duration-[1s] delay-300 opacity-0 {started ? 'started' : ''}"
-	>
-		Desferrando as pessoas desde 2023
+	<h1 class="absolute text-[red] left-[2rem] top-[2rem]">Nossa Missão</h1>
+	<img
+		alt="red car"
+		src="https://media-public.canva.com/Nwyj8/MADyQ-Nwyj8/1/s.jpg"
+		class="absolute left-[2rem] bottom-[2rem] w-[30rem]"
+		height="auto"
+	/>
+	<img
+		src="https://media-public.canva.com/MADGxmZ8TCo/4/screen.jpg"
+		alt="car interior"
+		class="absolute right-[2rem] top-[2rem] h-[15rem]"
+	/>
+	<h2 class="text-black absolute right-[2rem] bottom-[7.5rem] w-[50vw] text-center text-[2rem]">
+		Fazer os cálculos da TIR, VPL e análises para que você possa ter o seu carro dos sonhos sem ter
+		que pagar por ele duas vezes ou mais.
 	</h2>
-	<a href="/explanation">
+	<a href="/dashboard">
 		<button
-			disabled={positionOffset == false}
-			class="transition-all ease-in-out duration-[2s] delay-[2s] opacity-0 {opacityDone
+			class="absolute bottom-[2rem] right-[2rem] transition-all ease-in-out duration-[2s] delay-[2s] opacity-0 {opacityDone
 				? 'started'
 				: ''} {positionOffset ? 'translate-y-[20rem]' : 'translate-y-0'}">Continuar</button
 		>
@@ -54,21 +57,5 @@
 		opacity: 1;
 	}
 
-	button {
-		margin-top: 20px;
-		padding: 10px 15px;
-		cursor: pointer;
-		border: none;
-		background-color: #6200ea;
-		color: white;
-		border-radius: 5px;
-		font-size: 16px;
-		transition: background-color 0.3s ease;
-		transition: all 0.5s ease;
-
-		/* optional styling for button hover */
-		&:hover {
-			background-color: #4b00b5;
-		}
-	}
+	
 </style>

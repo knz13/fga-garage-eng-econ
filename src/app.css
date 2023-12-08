@@ -1,8 +1,5 @@
 @import '@fontsource/fira-mono';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 
 :root {
@@ -69,6 +66,7 @@ p {
 
 
 
+
 @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
@@ -81,3 +79,7 @@ p {
 
 
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
