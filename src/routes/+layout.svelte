@@ -5,6 +5,7 @@
 	import Modal from '$lib/Modal/Modal.svelte';
 	import { onMount } from 'svelte';
 	import { Toasts, toast } from 'svoast';
+	import './app.css';
 
 	let { supabase, session } = $page.data;
 	$: ({ supabase, session } = $page.data);
