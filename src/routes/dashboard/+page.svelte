@@ -313,7 +313,12 @@
 	{#if showingResults}
 		<div id="bottom-results" class="h-[100vh]">
 			<h1 class="text-left text-red text-[2rem]">Resultados</h1>
-
+			<h3>
+				Em um financiamento de carro, imobiliário ou compra ou de projetos, sempre existe o ganho da
+				empresa ou do vendedor do bem e os ganhos deles estão acrescido no financiamento que você
+				pode fazer. Por isso sempre é necessário uma boa análise do investimento. Para isso, vamos
+				explicar tudo para você entender bem o seu financiamento:
+			</h3>
 			<h2>VPL (Valor Presente Líquido)</h2>
 			<h3>
 				O Valor Presente Líquido (VPL) é uma medida financeira fundamental para avaliar a
@@ -327,7 +332,7 @@
 			</h3>
 
 			<p class="mt-[1rem]">
-				VPL do seu financiamento: {vpl.toLocaleString('pt-br', {
+				VPL do seu financiamento: {Math.abs(vpl).toLocaleString('pt-br', {
 					style: 'currency',
 					currency: 'BRL'
 				})}
@@ -344,7 +349,7 @@
 					investimento rentável, enquanto uma TIR abaixo dela sugere que o investimento pode não ser
 					atraente, dado o risco e o retorno esperado.
 				</h3>
-				<p>TIR do seu financiamento: {tir}%</p>
+				<p>TIR do seu financiamento: {tir * 100}%</p>
 			{/if}
 
 			<h3>
@@ -354,7 +359,7 @@
 				financeiras de baixo risco.
 			</h3>
 			<p>
-				VPL com a taxa Selic: {vplNaSelic.toLocaleString('pt-br', {
+				VPL com a taxa Selic: {Math.abs(vplNaSelic).toLocaleString('pt-br', {
 					style: 'currency',
 					currency: 'BRL'
 				})}
@@ -366,17 +371,6 @@
 				descobrirá que financiar o veículo resulta em um custo total significativamente maior do que
 				o preço à vista. Esta análise pode ajudar a decidir se vale mais a pena financiar ou poupar
 				e comprar o veículo à vista.
-			</h3>
-			<h3>
-				Tenha em mente que sempre em um financiamento existe uma taxa no qual trabalho no regime de
-				juros composto, ou seja um valor pequeno hoje, em uma taxa significativamente alta, pode se
-				transformar com o tempo em um valor extremamente alto e por isso temos que ter cuidado ao
-				analisar.
-			</h3>
-			<h3>
-				Em um financiamento de carro, imobiliário ou compra ou de projetos, sempre existe o ganho da
-				empresa ou do vendedor do bem e os ganhos deles estão acrescido no financiamento que você
-				pode fazer. Por isso sempre é necessário uma boa análise do investimento.
 			</h3>
 
 			<h2>Boas Compras!</h2>
