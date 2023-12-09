@@ -16,16 +16,22 @@
 		setTimeout(() => {
 			opacityDone = true;
 			positionOffset = false;
-		}, 2000);
+		}, 500);
 	});
 </script>
 
 <div class="centered-container">
-	<h1 class="transition-opacity ease-in duration-[1s] opacity-0 {started ? 'started' : ''}">
+	<h1
+		class=" text-[3rem] transition-opacity ease-in duration-[1s] opacity-0 {started
+			? 'started'
+			: ''}"
+	>
 		FGA'S GARAGE
 	</h1>
 	<h2
-		class="transition-opacity ease-in duration-[1s] delay-300 opacity-0 {started ? 'started' : ''}"
+		class=" text-[2.5rem] transition-opacity ease-in duration-[1s] delay-[0.5s] opacity-0 {started
+			? 'started'
+			: ''}"
 	>
 		Desferrando as pessoas desde 2023
 	</h2>
@@ -34,7 +40,7 @@
 		on:click={() => {
 			goto('/explanation');
 		}}
-		class="transition-all ease-in-out duration-[2s] delay-[2s] opacity-0 {opacityDone
+		class="transition-all ease-in-out duration-[2s] delay-[1s] mt-[1rem] opacity-0 {opacityDone
 			? 'started'
 			: ''} {positionOffset ? 'translate-y-[20rem]' : 'translate-y-0'}">Continuar</button
 	>

@@ -12,12 +12,12 @@
 		setTimeout(() => {
 			opacityDone = true;
 			positionOffset = false;
-		}, 2000);
+		}, 1500);
 	});
 </script>
 
 <div class="centered-container">
-	<h1 class="absolute text-[red] left-[2rem] top-[2rem]">Nossa Missão</h1>
+	<h1 class="absolute text-[red] left-[2rem] top-[2rem] text-[3rem]">Nossa Missão</h1>
 	<img
 		alt="red car"
 		src="https://media-public.canva.com/Nwyj8/MADyQ-Nwyj8/1/s.jpg"
@@ -35,7 +35,7 @@
 	</h2>
 	<a href="/dashboard">
 		<button
-			class="absolute bottom-[2rem] right-[2rem] transition-all ease-in-out duration-[2s] delay-[2s] opacity-0 {opacityDone
+			class="absolute bottom-[2rem] right-[2rem] transition-all ease-in-out duration-[2s] delay-[0.5s] opacity-0 {opacityDone
 				? 'started'
 				: ''} {positionOffset ? 'translate-y-[20rem]' : 'translate-y-0'}">Continuar</button
 		>
@@ -56,6 +56,4 @@
 	.started {
 		opacity: 1;
 	}
-
-	
 </style>
