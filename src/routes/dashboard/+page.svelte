@@ -309,43 +309,47 @@
 		<div id="bottom-results" class="h-[100vh]">
 			<h1 class="text-left text-red text-[2rem]">Resultados</h1>
 
-			<h2>VPL</h2>
+			<h2>VPL (Valor Presente Líquido)</h2>
 			<h3>
-				o valor presente líquido (VPL) é uma ferramenta financeira que permite avaliar a viabilidade
-				de um investimento ou projeto, levando em consideração o valor do dinheiro no tempo. Ele
-				calcula o valor atual de uma série de pagamentos futuros e investimentos, descontados a uma
-				taxa de juros apropriada. Se o VPL for positivo, o projeto pode ser considerado um bom
-				investimento, pois se espera que gere mais dinheiro do que custa. Se o VPL for negativo, o
-				projeto pode não ser um bom investimento, pois se espera que custe mais do que irá gerar.
+				O Valor Presente Líquido (VPL) é uma medida financeira fundamental para avaliar a
+				viabilidade de um investimento ou projeto. Ele representa a diferença entre o valor atual
+				dos fluxos de caixa que entram (receitas) e o valor atual dos fluxos de caixa que saem
+				(custos), ambos descontados a uma taxa de juros específica. Um VPL positivo indica que o
+				projeto gera um retorno financeiro superior ao custo do capital investido, tornando-se uma
+				opção atrativa. Por outro lado, um VPL negativo sugere que o projeto não gera retorno
+				suficiente para justificar o investimento, indicando que pode ser melhor reconsiderar ou
+				rejeitar a proposta.
 			</h3>
 
 			<p class="mt-[1rem]">
-				VPL do seu investimento: {vpl.toLocaleString('pt-br', {
+				VPL do seu financiamento: {vpl.toLocaleString('pt-br', {
 					style: 'currency',
 					currency: 'BRL'
 				})}
 			</p>
+
 			{#if tir != null}
-				<h2>TIR</h2>
+				<h2>TIR (Taxa Interna de Retorno)</h2>
 				<h3>
-					A Taxa Interna de Retorno (TIR) é uma métrica financeira usada para estimar a
-					lucratividade de potenciais investimentos. A TIR é a taxa de desconto que faz com que o
-					valor presente líquido (VPL) de uma série de fluxos de caixa futuros seja igual a zero. Em
-					outras palavras, é a taxa que faz com que o dinheiro investido hoje seja igual ao dinheiro
-					retornado no futuro, considerando o valor do dinheiro no tempo. Se a TIR de um
-					investimento for maior que a taxa de desconto, o investimento pode ser considerado bom,
-					pois se espera que gere um retorno maior do que o custo do capital. Se a TIR for menor que
-					a taxa de desconto, o investimento pode não ser considerado bom, pois se espera que gere
-					um retorno menor do que o custo do capital.
+					A Taxa Interna de Retorno (TIR) é outra métrica crucial na análise financeira, utilizada
+					para estimar a lucratividade de um investimento. Ela representa a taxa de juros na qual o
+					VPL de um projeto é zero. Em outras palavras, a TIR é a taxa que iguala o valor presente
+					das saídas de caixa (investimento inicial) com o valor presente das entradas de caixa
+					(retornos futuros). Uma TIR que excede a taxa de desconto (custo de capital) indica um
+					investimento rentável, enquanto uma TIR abaixo dela sugere que o investimento pode não ser
+					atraente, dado o risco e o retorno esperado.
 				</h3>
-				<p>TIR do seu investimento: {tir}%</p>
+				<p>TIR do seu financiamento: {tir}%</p>
 			{/if}
+
 			<h3>
-				Para fins de comparação, vamos mostrar o seu VPL caso fosse aplicada a taxa selic ao seu
-				fluxo de caixa
+				Para fins de comparação, vamos mostrar o seu VPL caso fosse aplicada a taxa Selic ao seu
+				fluxo de caixa. A taxa Selic, taxa básica de juros da economia, serve como referência para
+				avaliar se um investimento tem um retorno superior ao que seria obtido em aplicações
+				financeiras de baixo risco.
 			</h3>
 			<p>
-				VPL se fosse aplicada a taxa selic: {vplNaSelic.toLocaleString('pt-br', {
+				VPL com a taxa Selic: {vplNaSelic.toLocaleString('pt-br', {
 					style: 'currency',
 					currency: 'BRL'
 				})}
@@ -353,12 +357,13 @@
 
 			<h2>Análise</h2>
 			<h3>
-				Agora é necessário que você compare esse valor do VPL com o valor à vista para seu veículo.
-				Provavelmente você verá que o custo ao pagar o financiamento é muito maior que o custo do
-				veículo à vista.
+				Agora, compare o VPL do financiamento com o custo à vista do veículo. Muitas vezes, você
+				descobrirá que financiar o veículo resulta em um custo total significativamente maior do que
+				o preço à vista. Esta análise pode ajudar a decidir se vale mais a pena financiar ou poupar
+				e comprar o veículo à vista.
 			</h3>
 
-			<h2>Boa Análise e Boas compras!</h2>
+			<h2>Boa Análise e Boas Compras!</h2>
 		</div>
 	{/if}
 </div>
@@ -368,9 +373,6 @@
 		display: flex;
 		align-items: center;
 	}
-
-
-    
 
 	h2 {
 		margin-top: 1rem;
