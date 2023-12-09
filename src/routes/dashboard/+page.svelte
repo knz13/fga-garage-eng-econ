@@ -62,8 +62,8 @@
 	function calculateIRR(
 		cashFlows: number[],
 		initialGuess: number = 0.1,
-		maxIterations: number = 1000,
-		tolerance: number = 0.00001
+		maxIterations: number = 10000,
+		tolerance: number = 0.001
 	): number | null {
 		let x0 = initialGuess;
 		let x1 = 0.0;
@@ -82,6 +82,11 @@
 
 			if (Math.abs(npv) < tolerance) {
 				return x0;
+			}
+
+			// Check if derivative is too small to avoid division by a very small number
+			if (Math.abs(derivativeNpv) < 1e-10) {
+				return null; // or handle this case differently
 			}
 
 			x1 = x0 - npv / derivativeNpv;
@@ -362,8 +367,19 @@
 				o preço à vista. Esta análise pode ajudar a decidir se vale mais a pena financiar ou poupar
 				e comprar o veículo à vista.
 			</h3>
+			<h3>
+				Tenha em mente que sempre em um financiamento existe uma taxa no qual trabalho no regime de
+				juros composto, ou seja um valor pequeno hoje, em uma taxa significativamente alta, pode se
+				transformar com o tempo em um valor extremamente alto e por isso temos que ter cuidado ao
+				analisar.
+			</h3>
+			<h3>
+				Em um financiamento de carro, imobiliário ou compra ou de projetos, sempre existe o ganho da
+				empresa ou do vendedor do bem e os ganhos deles estão acrescido no financiamento que você
+				pode fazer. Por isso sempre é necessário uma boa análise do investimento.
+			</h3>
 
-			<h2>Boa Análise e Boas Compras!</h2>
+			<h2>Boas Compras!</h2>
 		</div>
 	{/if}
 </div>
