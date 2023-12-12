@@ -19,10 +19,11 @@
 <div class="centered-container">
 	<h1 class="absolute text-[red] left-[2rem] top-[2rem] text-[3rem]">Nossa Missão</h1>
 	<h2 class="absolute text-[black] left-[2rem] top-[8rem] text-[2rem]">
-		"Nunca mais faça conta de padaria nas CNTPs" <br />
+		"Nas CNTP NFCP!" <br />
 		<p class="text-end">-Ricardo Chaim</p>
 		<br /><br />
 		<p class="text-[1.2rem] text-left">* CNTPs = Condições Normais de Temperatura e Pressão</p>
+		<p class="text-[1.2rem] text-left">* NFCP = Nunca faça conta de padaria</p>
 	</h2>
 	<img
 		alt="red car"
