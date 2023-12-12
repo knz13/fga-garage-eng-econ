@@ -12,12 +12,18 @@
 		setTimeout(() => {
 			opacityDone = true;
 			positionOffset = false;
-		}, 1500);
+		}, 500);
 	});
 </script>
 
 <div class="centered-container">
 	<h1 class="absolute text-[red] left-[2rem] top-[2rem] text-[3rem]">Nossa Missão</h1>
+	<h2 class="absolute text-[black] left-[2rem] top-[8rem] text-[2rem]">
+		"Nunca mais faça conta de padaria nas CNTPs" <br />
+		<p class="text-end">-Ricardo Chaim</p>
+		<br /><br />
+		<p class="text-[1.2rem] text-left">* CNTPs = Condições Normais de Temperatura e Pressão</p>
+	</h2>
 	<img
 		alt="red car"
 		src="https://media-public.canva.com/Nwyj8/MADyQ-Nwyj8/1/s.jpg"
@@ -35,7 +41,7 @@
 	</h2>
 	<a href="/dashboard">
 		<button
-			class="absolute bottom-[2rem] right-[2rem] transition-all ease-in-out duration-[2s] delay-[0.5s] opacity-0 {opacityDone
+			class="absolute bottom-[2rem] right-[2rem] transition-all ease-in-out duration-[1s] opacity-0 {opacityDone
 				? 'started'
 				: ''} {positionOffset ? 'translate-y-[20rem]' : 'translate-y-0'}">Continuar</button
 		>
