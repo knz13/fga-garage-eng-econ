@@ -104,7 +104,7 @@
 	function getNextLabel(): string {
 		const lastIndex = chartLabels.length - 1;
 		const lastDate = lastIndex >= 0 ? new Date(chartLabels[lastIndex]) : initialDate;
-		return format(intervalOptions[interval](lastDate, 1), 'dd/MM/yyyy');
+		return format(intervalOptions[interval](lastDate, 1), 'yyyy-MM-dd');
 	}
 
 	function updateBarColors() {
